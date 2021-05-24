@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Daftar extends Model
 {
+    protected $table="daftar";
     use HasFactory;
 }

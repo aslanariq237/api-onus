@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDaftarsTable extends Migration
+class CreateDaftarTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateDaftarsTable extends Migration
      */
     public function up()
     {
-        Schema::create('daftars', function (Blueprint $table) {
+        Schema::create('daftar', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->time('waktu');
-            $table->string('tipe ');
+            $table->time('waktu',);
+            $table->string('tipe');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateDaftarsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('daftars');
+        Schema::dropIfExists('daftar');
     }
 }
