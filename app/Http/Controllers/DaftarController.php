@@ -39,6 +39,9 @@ class DaftarController extends Controller
         $daftar->title = $request->title;
         $daftar->waktu = $request->waktu;
         $daftar->tipe = $request->tipe;
+        // $gambar = $request->file('images');
+        // $response = cloudinary()->upload($request->file('images')->getRealPath())->getSecurePath();
+        // return $response;
         if ($daftar->save()) {
             return ["status"=>"berhasil menyimpan data"];
         }else{
