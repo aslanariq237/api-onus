@@ -18,7 +18,6 @@ class CreateDaftarTable extends Migration
             $table->string('title');
             $table->time('waktu',);
             $table->string('tipe nnmm');
-            $table->string('gambar');
             $table->timestamps();
         });
     }

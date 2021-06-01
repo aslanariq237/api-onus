@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Daftar;
 
-class DaftarController extends Controller
+class articleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class DaftarController extends Controller
      */
     public function index()
     {
-        return Daftar::all();
+        //
     }
 
     /**
@@ -35,15 +34,7 @@ class DaftarController extends Controller
      */
     public function store(Request $request)
     {
-        $daftar = new Daftar;
-        $daftar->title = $request->title;
-        $daftar->waktu = $request->waktu;
-        $daftar->tipe = $request->tipe;
-        if ($daftar->save()) {
-            return ["status"=>"berhasil menyimpan data"];
-        }else{
-            return ["status"=>"tidak berhasil menyimpan data"];
-        }
+        //
     }
 
     /**
@@ -54,7 +45,7 @@ class DaftarController extends Controller
      */
     public function show($id)
     {
-        return Daftar::where('id', $id)->first();
+        //
     }
 
     /**
@@ -65,7 +56,7 @@ class DaftarController extends Controller
      */
     public function edit($id)
     {
-        return Daftar::where('id', $id)->first();
+        //
     }
 
     /**
@@ -77,15 +68,7 @@ class DaftarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $daftar = Daftar::where('id', $id)->first();
-        $daftar->title = $request->title;
-        $daftar->waktu = $request->waktu;
-        $daftar->tipe = $request->tipe;
-        if ($daftar->save()) {
-            return ["status"=>"berhasil menyimpan data"];
-        }else{
-            return ["status"=>"tidak berhasil menyimpan data"];
-        }
+        //
     }
 
     /**
@@ -96,11 +79,6 @@ class DaftarController extends Controller
      */
     public function destroy($id)
     {
-        $daftar = Daftar::where('id', $id)->first();
-        if ($daftar->delete()) {
-            return ["status"=>"berhasil menghapus data"];
-        }else{
-            return ["status"=>"tidak berhasil menghapus data"];
-        }
+        //
     }
 }
